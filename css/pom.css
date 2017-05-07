@@ -1,0 +1,128 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300');
+a {
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #0288D1;
+    background-color: #EFEFEF;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container {
+    vertical-align: middle;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.upper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.downer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#t {
+    width: 50%;
+    max-height: 80%;
+    overflow: hidden;
+}
+
+#b {
+    width: 50%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.timer {
+    position: relative;
+    background-color: #CCC;
+    border: solid 1px;
+    font-size: 2em;
+    width: 200px;
+    height: 40px;
+    min-height: 60px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 5px;
+    border: none;
+    border-bottom: solid 4px #999;
+    border-radius: 3px;
+    color: #222;
+    animation: queue 1s ease 0s 1;
+    transform-origin: 50% 0%;
+}
+
+@keyframes queue {
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+.remove {
+    animation: pop 1s ease 0s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes pop {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+}
+
+.button {
+    text-align: center;
+    vertical-align: middle;
+    background-color: #A11;
+    width: 20%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid 4px #800;
+    border-radius: 3px;
+    color: #DDD;
+}
+
+.button:active {
+    -ms-transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+    border-bottom: none;
+}
